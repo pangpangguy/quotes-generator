@@ -1,0 +1,121 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #fec89a;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23a7a7a7' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-family:'PT Serif', sans-serif;
+    font-weight: 700; 
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.quote-container{
+    width:auto;
+    max-width: 900px;
+    padding: 20px 30px; /*py, px*/
+    border-radius: 10px;
+
+    /*White box with opacity*/
+    background-color: rgba(248, 237, 235,0.4);
+
+    /*Box shadow: horizontal vertical blur radius*/
+    box-shadow: 0 10px 10px 10px rgba(0,0,0,0.2);
+}
+
+.quote-text{
+    font-size:2.75rem;
+}
+
+.long-quote{
+    font-size: 2rem;
+}
+
+.fa-quote-left{
+    font-size: 3.5rem;
+}
+
+.quote-author{
+    margin-top:15px;
+    font-size:2rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.button-container{
+    display:flex;
+    justify-content: space-between;
+}
+
+button{
+    font-size: 1.2rem;
+    height: 2.5rem;
+    border-radius:10px;
+    border: none; 
+    color: white;
+    background-color: #333;
+    outline: none;  /*No blue outline when clicked*/
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(121,121,121,0.65);
+}
+
+button:hover{
+    filter: brightness(125%);
+}
+
+button:active{
+    transform: translate(0, 0.3rem); /*Move button vertically down 0.3rem when clicked*/
+    box-shadow: none;
+}
+
+.twitter-button:hover{
+    color: #38a1f3;
+}
+/*Footer*/
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #bb7f74;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+a{
+    color: #bb7f74;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #9b4e40;
+}
+/*Loading icon*/
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #e09f3e; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*Media queries*/
+@media screen and (max-width: 1000px){
+    .quote-container {
+        margin: auto 10px;  /*Margin of 10px on left and right*/
+    }
+
+    .quote-text{
+        font-size: 2.5rem;
+    }
+}
